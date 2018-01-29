@@ -1,5 +1,13 @@
 #!/bin/sh
 
+cd configmapcontroller
+sh teardown.sh
+cd ..
+
+cd exposecontroller
+sh teardown.sh
+cd ..
+
 cd frontend
 sh teardown.sh
 cd ..

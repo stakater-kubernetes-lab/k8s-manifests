@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: frontend-ui
-        image: rafabene/microservices-frontend:1.0
+        image: stakaterk8slabs/frontend:v1.0
         ports:
         - name: http
           containerPort: 8080
