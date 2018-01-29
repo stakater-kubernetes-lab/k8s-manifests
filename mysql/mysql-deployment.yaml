@@ -55,5 +55,6 @@ spec:
           mountPath: /var/lib/mysql/data
       volumes:
       - name: mysql-persistent-volume
-        persistentVolumeClaim:
-          claimName: mysql-pvc
+        emptyDir: {}
+        #persistentVolumeClaim:
+        #  claimName: mysql-pvc
