@@ -13,7 +13,7 @@ kind: Role
 metadata:
   name: configmapcontroller-demo-role
   # hardcoded namespace
-  namespace: demo
+  namespace: test2
 rules:
   - apiGroups:
       - ""
@@ -41,7 +41,7 @@ apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
 metadata:
   name: configmapcontroller-demo-role-binding
-  namespace: demo
+  namespace: test2
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -49,4 +49,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: configmapcontroller-demo
-    namespace: demo
+    namespace: test2
