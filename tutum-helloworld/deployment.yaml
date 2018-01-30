@@ -26,7 +26,7 @@ spec:
         version: 1.0.0
     spec:
       containers:
-      - image: tutum/hello-world:latest
+      - image: stakater/docker-hello-world:master
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
