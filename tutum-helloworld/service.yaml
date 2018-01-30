@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    fabric8.io/ingress.annotations: |-
+      ingress.kubernetes.io/force-ssl-redirect: false
+      kubernetes.io/ingress.class: external-ingress
+  labels:
+    app: tutum-helloworld
+    expose: "true"
+    version: 1.0.0
+  name: helloworld
+  namespace: test2
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: tutum-helloworld
+  sessionAffinity: None
+  type: ClusterIP
