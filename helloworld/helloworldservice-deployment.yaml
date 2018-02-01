@@ -37,3 +37,15 @@ spec:
         ports:
         - name: http
           containerPort: 8080
+        livenessProbe:
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          httpGet:
+            path: /api/hello/Kubernetes
+            port: 8080
+        readinessProbe:
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          httpGet:
+            path: /api/hello/Kubernetes
+            port: 8080

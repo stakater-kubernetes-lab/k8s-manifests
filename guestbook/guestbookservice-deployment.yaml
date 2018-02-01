@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: guestbook-service
-        image: rafabene/microservices-guestbook:1.0
+        image: stakaterk8slabs/guestbook-wildfly:v1.0
         ports:
         - name: http
           containerPort: 8080
